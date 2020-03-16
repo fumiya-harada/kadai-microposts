@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @users = User.new
+    @user = User.new
   end
 
   def create
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       flash[:success] = 'ユーザーを登録しました。'
       redirect_to @user
     else
-      flash.now[:denger] = 'ユーザーの登録に失敗しました。'
+      flash.now[:danger] = 'ユーザーの登録に失敗しました。'
       render :new
     end
   end
