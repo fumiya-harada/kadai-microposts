@@ -3,6 +3,7 @@
       <li class="media">
           <div>
             <%= user.content %>
+            <%= render 'favorites/favorite_button', micropost: user %>
           </div>
       </li>
     <% end %>
